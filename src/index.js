@@ -2,9 +2,9 @@ import React from "react";
 import ReactDom from "react-dom";
 import './index.css';
 
-function Hi(){
+function Hi(prop){
   return <div class="main">
-    <h1 class="header">Hello ayeshaa zahid</h1>
+    <h1 class="header">Hello {prop.name}</h1>
     <br/>
     <p class="ptag"><strong>Today's Tasks</strong></p>
     <ol class="list">
@@ -18,4 +18,4 @@ function Hi(){
   </div>;
 }
 
-ReactDom.render(<Hi/>,document.querySelector("#root"));
+ReactDom.render(<Hi name="Ayesha"/>,document.querySelector("#root"));
