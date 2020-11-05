@@ -30,7 +30,7 @@ jobs:
           
       # create build
       - name: create build
-        run: npm build
+        run: npm run-script build
         
       #install surge
       - name: install surge
@@ -39,3 +39,4 @@ jobs:
       #deploy to surge
       - name: deploy to surge
         run: surge ./build http://brainy-react.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+        
