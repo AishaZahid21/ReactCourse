@@ -28,14 +28,20 @@ jobs:
         with:
           version: 12
           
+     # install yarn 
+      - name: GitHub actions for yarn
+        uses: Borales/actions-yarn@v2.1.0
+        with:
+           cmd: install #npm install/yarn
+           
       # create build
-      - name: create build
-        run: npm run build
+     - name: Creating build
+        run: yarn build
         
-      #install surge
+      # install surge
       - name: install surge
         run: npm install -g surge
        
-      #deploy to surge
+      # deploy to surge
       - name: deploy to surge
         run: surge ./build http://brainy-react.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
