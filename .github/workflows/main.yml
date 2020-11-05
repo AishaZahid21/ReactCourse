@@ -38,7 +38,7 @@ jobs:
         
       # create build
       - name: create build
-        run: npm build
+        run: yarn build
         
       #install surge
       - name: install surge
