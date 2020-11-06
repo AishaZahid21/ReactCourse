@@ -1,9 +1,12 @@
-.main{
-  background-color: rgba(88, 230, 230, 0.589);
+html,body,#root,.room{
+  margin: 0;
+  height: 100%;
 }
-.header{
-  color: brown;
+.lit{
+  background-color: white;
+  color: black;
 }
-.ptag{
-  color: rgb(4, 150, 101);
+.dark{
+  background-color: black;
+  color: white;
 }
