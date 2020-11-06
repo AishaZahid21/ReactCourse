@@ -4,23 +4,40 @@ import "./index.css";
 
 function Room(){
   const [isLit , setLit] = useState(true);
-  const [tempValue]=useState({day:72,night:22})
-  const brightness = isLit ? 'lit': 'dark'
+  const [tempValue, setTemp] = useState(72);
+  const brightness = isLit ? 'lit': 'dark';
+
 return <div className={`room ${brightness}`}>
   This room is {isLit ? 'lit' : 'dark'}
 <br/>
-Room temperature is {isLit ? tempValue.day : tempValue.night}
+Room temperature is {tempValue}
 <br/>
+
 <button onClick={()=>{
   if(!isLit){
     setLit(!isLit)
+    setTemp(72)
   }
 }}> ON </button>
+
 <button onClick={()=>{
   if(isLit){
     setLit(!isLit)
+   setTemp(44)
   }
 }}> OFF </button>
+
+<br/>
+
+<button onClick={()=>{
+  var newTempValue = tempValue + 1
+  setTemp(newTempValue)
+}}> + </button>
+
+<button onClick={()=>{
+  var newTempValue = tempValue - 1
+  setTemp(newTempValue)
+}}> - </button>
 
 
 </div>
